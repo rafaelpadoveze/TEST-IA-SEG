@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib>>
+int main()
+{
+    int clima;
+    int umidade;
+    //tempo sol nublado chuva
+    //sol - umidade <=75=sim ou >75=nao
+    //nublado = sim(4.0)
+    //vento - sim=não ou não=sim
+
+    printf("qual é o tempo atual? (1 para sol, 2 para nublado, 3 para chuva)");
+    scanf("%d", &clima);
+
+    //-------------------------------------------------
+    if (clima = 1)//sol
+    {
+    	printf("qual é a umidade atual? (1 para menos de 75, 2 para mais de 75)");
+		scanf("%d", &umidade);
+		if (umidade = 1)//men 75
+    	   {
+           printf("Pode viajar com segurança");
+     	   }
+  		   if (umidade = 2)//mais 75
+    	   {
+           printf("Recomendo não ir viajar, condição de risco");
+     	   }
+    }
+    
+    //--------------------------------------------
+    if (clima = 2)//nublado
+    {
+        printf("Pode ir viajar camarada !\n");
+    }
+    //---------------------------------------------
+    if (clima = 3)//chuva
+    {
+        printf("You entered %d.\n", number);
+    }
+
+    printf("The if statement is easy.");
+
+    return 0;
+}
