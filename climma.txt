@@ -1,44 +1,60 @@
 #include <stdio.h>
-#include <stdlib>>
-int main()
+#include <stdlib.h>
+#include <locale.h>//para acentos junto com setlocale(LC_ALL, “Portuguese”);
+int main(void)
 {
+	//setlocale(LC_ALL, "Portuguese");
+	setlocale(LC_ALL, "");
     int clima;
     int umidade;
+	int vento;
     //tempo sol nublado chuva
     //sol - umidade <=75=sim ou >75=nao
     //nublado = sim(4.0)
-    //vento - sim=não ou não=sim
+    // chuva = vento - sim=não ou não=sim
 
-    printf("qual é o tempo atual? (1 para sol, 2 para nublado, 3 para chuva)");
+	system("cls");
+    printf("qual é o tempo atual? \n(1 para sol, 2 para nublado, 3 para chuva)\n: ");
     scanf("%d", &clima);
 
     //-------------------------------------------------
-    if (clima = 1)//sol
+	
+    if (clima == 1)//sol
     {
-    	printf("qual é a umidade atual? (1 para menos de 75, 2 para mais de 75)");
+    	printf("\nqual e a umidade atual? (em porcentagem) \n(1 para menor ou igual a 75%, 2 para mais de 75%)\n: ");
 		scanf("%d", &umidade);
-		if (umidade = 1)//men 75
+		if (umidade == 1)//men 75
     	   {
-           printf("Pode viajar com segurança");
+           printf("\nPode viajar com seguranca !!:)");
      	   }
-  		   if (umidade = 2)//mais 75
+  		   else if (umidade == 2)//mais 75
     	   {
-           printf("Recomendo não ir viajar, condição de risco");
+           printf("\nRecomendo nao ir viajar condicao de risco XXX :(");
      	   }
     }
     
     //--------------------------------------------
-    if (clima = 2)//nublado
+    else if (clima == 2)//nublado
     {
-        printf("Pode ir viajar camarada !\n");
+        printf("\nPode ir viajar camarada !!:)\n");
     }
     //---------------------------------------------
-    if (clima = 3)//chuva
+    else if (clima == 3)//chuva
     {
-        printf("You entered %d.\n", number);
+		printf("\nesta ventando? \n(1 para sim, 2 para nao)\n: ");
+		scanf("%d", &vento);
+		if (vento == 2)
+    	   {
+           printf("\nPode viajar com seguranca !! :)");
+     	   }
+  		   else if (vento == 1)
+    	   {
+           printf("\nRecomendo nao ir viajar  condicao de risco XX :(");
+     	   }
+        
     }
 
-    printf("The if statement is easy.");
+    printf("\n Obrigado por utilizar o ajudante de viagem 2000 ( atualmente em teste)");
 
     return 0;
 }
