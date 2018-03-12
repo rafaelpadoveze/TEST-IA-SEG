@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>//para acentos junto com setlocale(LC_ALL, “Portuguese”);
+
+void basedeconhecimento() {
+//R1
+//if (clima == 1) && (umidade == 1)
+//{ printf("\nPode viajar com seguranca !!:)");
+  //regra =1;}
+
+}
 int main(void)
 {
 	//setlocale(LC_ALL, "Portuguese");
@@ -17,7 +25,7 @@ int main(void)
     printf("qual é o tempo atual? \n(1 para sol, 2 para nublado, 3 para chuva)\n: ");
     scanf("%d", &clima);
 
-    //-------------------------------------------------
+    //--------------------------------------------------------------------------------------
 	
     if (clima == 1)//sol
     {
@@ -33,12 +41,12 @@ int main(void)
      	   }
     }
     
-    //--------------------------------------------
+    //-----------------------------------------------------------------------------------
     else if (clima == 2)//nublado
     {
         printf("\nPode ir viajar camarada !!:)\n");
     }
-    //---------------------------------------------
+    //-----------------------------------------------------------------------------
     else if (clima == 3)//chuva
     {
 		printf("\nesta ventando? \n(1 para sim, 2 para nao)\n: ");
@@ -54,7 +62,8 @@ int main(void)
         
     }
 
-    printf("\n Obrigado por utilizar o ajudante de viagem 2000 ( atualmente em teste)");
-
+//-------------------------------------------------------------------------------------
+    printf("\n Obrigado por utilizar o ajudante de viagem 2000 ( atualmente em teste)\n\n");
+    system("pause");
     return 0;
 }
