@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int aparencia, temperatura, umidade, viajar, vento, opcoes;
+
+void conhecimento()
+{
+     if(aparencia==1 && umidade<=75) viajar=1;
+     if(aparencia==1 && umidade>75) viajar=0;
+     if(aparencia==2) viajar=1;
+     if(aparencia==3 && vento==1) viajar=0;
+     if(aparencia==3 && vento==2) viajar=1;
+     if ((aparencia<1||aparencia>3)||(vento <1||vento>2)) printf("\nOpcoes de escolha invalidas.\nExecute o programa novamente...\n\n");//tratamentos de erros
+     opcoes=0;
+     if (viajar==1 && opcoes==0) printf("\nPode viajar\n"); //1=vai //0=não vai
+     if (viajar==0 && opcoes==0) printf("\nNão pode viajar\n\n");
+}
+    int main()
+    {
+        setlocale(LC_ALL, "Portuguese");
+        
+        printf("Escolha o número da opção correspondente a aparencia: \n Sol = 1\n Nublado = 2\n Chuva = 3\n");
+        scanf("%d",&aparencia);
+        
+        printf("\nEntre com valor correspondente a umidade: \n");
+        scanf("%d",&umidade);
+        
+        printf("\nEscolha o numero da opcao correspondente ao vento: \n Sim = 1\n Nao = 2\n");
+        scanf("%d",&vento);
+        
+        conhecimento();
+        printf("\n Obrigado por utilizar o ajudante de viagem 2000 ( atualmente em teste)\n\n");
+
+
+        system("PAUSE");
+        return 0;
+
+
+} 
