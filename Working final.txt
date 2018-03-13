@@ -2,8 +2,16 @@
 #include <stdlib.h>
 #include <locale.h>
 
-int aparencia, temperatura, umidade, viajar, vento, opcoes;
-
+int aparencia, temperatura, umidade, viajar, vento, opcoes, regra;
+void regras(){
+if(aparencia==1 && umidade<=75) regra=1;
+     if(aparencia==1 && umidade>75) regra=2;
+     if(aparencia==2) regra=3;
+     if(aparencia==3 && vento==1) regra=4;
+     if(aparencia==3 && vento==2) regra=5;
+     
+     printf("a regra é:%d ", regra);
+     }
 void conhecimento()
 {
      if(aparencia==1 && umidade<=75) viajar=1;
@@ -30,6 +38,7 @@ void conhecimento()
         scanf("%d",&vento);
         
         conhecimento();
+        regras();
         printf("\n Obrigado por utilizar o ajudante de viagem 2000 ( atualmente em teste)\n\n");
 
 
